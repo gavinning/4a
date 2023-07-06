@@ -1,0 +1,47 @@
+{
+  "name": "@4a/retry",
+  "version": "0.2.1",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/index.esm.js",
+  "module": "./dist/index.esm.js",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "build": "vite build && tsc",
+    "type": "tsc src/index.ts --lib es2015,dom --declarationDir dist --emitDeclarationOnly --declaration",
+    "coverage": "NODE_ENV=development vitest run --coverage",
+    "prepack": "npm run build",
+    "prepublish": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "prettier": {
+    "semi": false
+  },
+  "author": "gavinning <gavinning@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gavinning/retry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gavinning/retry/issues"
+  },
+  "homepage": "https://github.com/gavinning/retry#readme",
+  "keywords": [
+    "retry",
+    "auto-retry",
+    "retry-request",
+    "retry-axios"
+  ],
+  "peerDependencies": {
+    "axios": "*"
+  }
+}

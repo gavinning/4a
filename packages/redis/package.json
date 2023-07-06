@@ -1,0 +1,45 @@
+{
+  "name": "@4a/rediskit",
+  "version": "0.3.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/index.esm.js",
+  "module": "./dist/index.esm.js",
+  "description": "redis kit",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "build": "vite build && tsc",
+    "type": "tsc src/index.ts --lib es2015,dom --declarationDir dist --emitDeclarationOnly --declaration",
+    "coverage": "NODE_ENV=development vitest run --coverage",
+    "prepack": "npm run build",
+    "prepublish": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gavinning/RedisKit.git"
+  },
+  "keywords": [
+    "redis",
+    "kit",
+    "redis-kit",
+    "rediskit"
+  ],
+  "author": "gavinning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gavinning/RedisKit/issues"
+  },
+  "homepage": "https://github.com/gavinning/RedisKit#readme",
+  "peerDependencies": {
+    "ioredis": "^5.3.0"
+  }
+}
