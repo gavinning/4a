@@ -12,10 +12,10 @@ npm i @4a/retry
 
 ```ts
 // ES6
-import Retry from '@4a/retry'
+import { Retry } from '@4a/retry'
 
 // Nodejs
-const Retry = require('@4a/retry')
+const { Retry } = require('@4a/retry')
 ```
 
 ### Example
