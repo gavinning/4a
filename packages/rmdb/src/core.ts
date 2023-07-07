@@ -53,14 +53,12 @@ export class Core {
     // 缓存查询失败
     // 更新数据到Redis
     // 允许失败，失败则下一次继续从数据源读取
-    data = await this.update()
-
-    // 返回数据
-    log('[RMDB]data from dataSource by:', this.key)
-    return data
+    return this.update()
   }
 
   async update() {
+    // 返回数据
+    log('[RMDB]data from dataSource by:', this.key)
     const data = await this.dataSource(...this.filters)
     const source = this.isString(data) ? data : JSON.stringify(data)
     !this.timeout ? this.redis.set(this.key, source) : this.redis.set(this.key, source, 'EX', this.timeout)
