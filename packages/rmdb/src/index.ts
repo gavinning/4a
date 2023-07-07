@@ -1,3 +1,3 @@
-export { regRmdb } from './rmdb'
-export type { RMDB } from './rmdb'
-export type { Core } from './core'
+export { regRmdb } from './rmdb.js'
+export type { RMDB } from './rmdb.js'
+export type { Core } from './core.js'

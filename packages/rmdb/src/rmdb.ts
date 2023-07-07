@@ -1,13 +1,16 @@
 import { Redis } from 'ioredis'
 import { Core, DataSource } from './core'
 
+const defaultAutoUpdateTime = 5 * 60
+
 export class RMDB {
   private expireTime?: number
-  private autoUpdateTime: number = 5 * 60
+  private autoUpdateTime?: number
 
   constructor(public readonly key: string, public readonly redis: Redis) {
     this.key = key
     this.redis = redis
+    this.autoUpdateTime = defaultAutoUpdateTime
   }
 
   /**
@@ -16,7 +19,7 @@ export class RMDB {
    * @param expireSeconds 数据过期时间，可选，默认不过期
    * @returns
    */
-  keep(autoUpdateSeconds: number, expireSeconds?: number) {
+  keep(autoUpdateSeconds?: number, expireSeconds?: number) {
     this.autoUpdateTime = autoUpdateSeconds
     this.expireTime = expireSeconds
     return this
@@ -27,7 +30,7 @@ export class RMDB {
       key: this.key,
       redis: this.redis,
       timeout: this.expireTime,
-      autoUpdateTime: this.autoUpdateTime,
+      autoUpdateTime: this.autoUpdateTime || defaultAutoUpdateTime,
       dataSource,
     })
   }
@@ -40,4 +43,5 @@ export function regRmdb(redis: Redis) {
 }
 
 // const creator = regRMDB(redis)
+// creator('test:f1').from(() => dataSource())
 // creator('test:f1').keep(60 * 5).from(() => dataSource())
