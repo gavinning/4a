@@ -1,9 +1,10 @@
 {
   "name": "rmdb",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "type": "module",
   "main": "./dist/index.esm.js",
   "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "files": ["dist"],
   "license": "MIT",
   "author": "gavinning <gavinning@qq.com>",

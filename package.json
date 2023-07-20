@@ -7,7 +7,8 @@
   "scripts": {
     "build": "pnpm -r run build",
     "test": "pnpm --recursive test",
-    "watch": "pnpm --parallel -r run watch"
+    "watch": "pnpm --parallel -r run watch",
+    "publish": "pnpm --recursive publish --access public"
   },
   "prettier": {
     "semi": false
