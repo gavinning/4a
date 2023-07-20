@@ -1,12 +1,11 @@
 {
-  "name": "rmdb",
-  "version": "0.4.2",
+  "name": "@4a/asp",
+  "version": "2.0.0",
   "type": "module",
-  "main": "./dist/index.esm.js",
-  "module": "dist/index.esm.js",
   "files": ["dist"],
-  "license": "MIT",
-  "author": "gavinning <gavinning@qq.com>",
+  "main": "./dist/index.esm.js",
+  "module": "dist/asp.esm.js",
+  "description": "color log, 染色日志",
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
@@ -27,29 +26,31 @@
     "type": "git",
     "url": "git+https://github.com/gavinning/4a.git"
   },
+  "keywords": [
+    "log",
+    "logger",
+    "color-log",
+    "color-logger",
+    "日志",
+    "染色日志",
+    "彩色日志"
+  ],
   "bugs": {
     "url": "https://github.com/gavinning/4a/issues"
   },
+  "author": "gavinning",
+  "license": "MIT",
   "homepage": "https://github.com/gavinning/4a#readme",
-  "engines": {
-    "node": ">=10"
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "printWidth": 110,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "arrowParens": "avoid"
-  },
-  "peerDependencies": {
-    "ioredis": "^5.3.0"
-  },
   "dependencies": {
-    "@4a/rediskit": "workspace:^0.3.0",
-    "debug": "^4.3.4"
+    "@base2/pretty-print-object": "^1.0.2",
+    "colors": "^1.4.0"
   },
   "devDependencies": {
-    "@types/debug": "^4.1.8"
+    "@types/node": "^18.16.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }

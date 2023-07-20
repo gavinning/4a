@@ -12,7 +12,6 @@
     "build": "vite build && tsc",
     "type": "tsc src/index.ts --lib es2015,dom --declarationDir dist --emitDeclarationOnly --declaration",
     "coverage": "NODE_ENV=development vitest run --coverage",
-    "prepack": "npm run build",
     "prepublish": "npm run build"
   },
   "exports": {
@@ -29,12 +28,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gavinning/retry.git"
+    "url": "git+https://github.com/gavinning/4a.git"
   },
   "bugs": {
-    "url": "https://github.com/gavinning/retry/issues"
+    "url": "https://github.com/gavinning/4a/issues"
   },
-  "homepage": "https://github.com/gavinning/retry#readme",
+  "homepage": "https://github.com/gavinning/4a#readme",
   "keywords": [
     "retry",
     "auto-retry",
