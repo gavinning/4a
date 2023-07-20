@@ -1,8 +1,8 @@
 {
   "name": "@4a/asp",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "type": "module",
-  "files": ["dist"],
+  "files": ["dist", "preview.png"],
   "main": "./dist/index.esm.js",
   "module": "dist/asp.esm.js",
   "types": "dist/index.d.ts",
@@ -41,7 +41,7 @@
   },
   "author": "gavinning",
   "license": "MIT",
-  "homepage": "https://github.com/gavinning/4a#readme",
+  "homepage": "https://github.com/gavinning/4a/blob/main/packages/asp/readme.md",
   "dependencies": {
     "@base2/pretty-print-object": "^1.0.2",
     "colors": "^1.4.0"

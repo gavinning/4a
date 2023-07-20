@@ -31,7 +31,8 @@ asp.pretty().error('message', { app: '@4a/asp' })
 
 ### Preview
 
-![@4a/asp:preview](preview.png)
+<!-- https://raw.githubusercontent.com/gavinning/4a/main/packages/asp/preview.png -->
+![@4a/asp:preview](https://raw.githubusercontent.com/gavinning/4a/main/packages/asp/preview.png)
 
 ### class Asp
 

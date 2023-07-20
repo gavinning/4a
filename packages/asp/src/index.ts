@@ -57,31 +57,31 @@ export class Asp {
     return this
   }
 
-  gray() {
-    this.print(Logger.gray, arguments)
+  gray(...args: any[]) {
+    this.print(Logger.gray, args)
   }
 
-  log() {
-    this.print(Logger.log, arguments)
+  log(...args: any[]) {
+    this.print(Logger.log, args)
   }
 
-  info() {
-    this.print(Logger.info, arguments)
+  info(...args: any[]) {
+    this.print(Logger.info, args)
   }
 
-  debug() {
-    this.print(Logger.debug, arguments)
+  debug(...args: any[]) {
+    this.print(Logger.debug, args)
   }
 
-  warn() {
-    this.print(Logger.warn, arguments)
+  warn(...args: any[]) {
+    this.print(Logger.warn, args)
   }
 
-  error() {
-    this.print(Logger.error, arguments)
+  error(...args: any[]) {
+    this.print(Logger.error, args)
   }
 
-  private print(type: Logger, args: IArguments) {
+  private print(type: Logger, args: any[]) {
     level < Level[type] ||
       console[Method[type]](
         this.prefix(),
