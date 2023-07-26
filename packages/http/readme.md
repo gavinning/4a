@@ -21,12 +21,12 @@ import { createHttp } from '@4a/http'
 type AnyFunction<T> = (...args: any[]) => T
 type API = Record<string, AnyFunction<AxiosRequestConfig>>
 
-createHttp(api: API, opt: AxiosRequestConfig?)
+createHttp(api: API, opt?: AxiosRequestConfig)
 ```
 
 ```ts
 // api.ts
-// 示例定义接口
+// Example
 export const api = {
   ok(params: Item): AxiosRequestConfig {
     return {
@@ -44,4 +44,18 @@ const http = createHttp(api)
 const http = createHttp(api, { timeout: 5000 })
 
 http.ok({ a: 1 })
+```
+
+More
+```ts
+export function createFactory(config: any) {
+  return createHttp(api(config), {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    transformRequest(data: any) {
+      return JSON.stringify(signed(data, config.secret))
+    }
+  })
+}
 ```
