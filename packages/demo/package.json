@@ -1,0 +1,30 @@
+{
+  "name": "@3a/demo",
+  "version": "0.1.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/index.esm.js",
+  "module": "dist/asp.esm.js",
+  "types": "dist/index.d.ts",
+  "description": "demo",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "build": "vite build && tsc",
+    "type": "tsc src/index.ts --lib es2015,dom --declarationDir dist --emitDeclarationOnly --declaration",
+    "coverage": "NODE_ENV=development vitest run --coverage",
+    "prepublish": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "author": "gavinning <gavinning@qq.com>",
+  "engines": {
+    "node": ">=10"
+  }
+}
