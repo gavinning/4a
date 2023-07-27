@@ -2,6 +2,7 @@ import axios from 'axios'
 import type { Item } from './types'
 import type { AxiosResponse, AxiosRequestConfig } from 'axios'
 
+export * from './lib'
 export * from './types'
 
 // 生成http实例

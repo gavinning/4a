@@ -1,6 +1,6 @@
 {
   "name": "@4a/http",
-  "version": "0.4.1",
+  "version": "0.6.0",
   "type": "module",
   "files": [
     "dist"
@@ -8,7 +8,7 @@
   "main": "./dist/index.esm.js",
   "module": "dist/asp.esm.js",
   "types": "dist/index.d.ts",
-  "description": "demo",
+  "description": "简单易用的http接口扩展工具",
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
