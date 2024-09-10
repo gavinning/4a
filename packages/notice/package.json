@@ -1,6 +1,6 @@
 {
-  "name": "@4a/demo",
-  "version": "0.1.0",
+  "name": "@4a/notice",
+  "version": "0.0.1",
   "type": "module",
   "files": ["dist"],
   "main": "./dist/index.esm.js",
